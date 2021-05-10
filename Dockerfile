@@ -37,11 +37,9 @@ RUN conda install -c conda-forge protego -y
 RUN conda install -c anaconda queuelib -y
 
 COPY ./scrapy ./app/scrapy
-COPY ./tutorial ./app/tutorial
-COPY dockerrun.py ./app/dockerrun.py
 
 # In order to build this image you should run the command below.
 #   docker build . -t scrapy-image
 # To run it:
 #   docker run -it scrapy-image bash
-# And it will open an interactive shell where you can cd to the app and run python dockerrun.py.
+# And it will open an interactive shell inside the container.
